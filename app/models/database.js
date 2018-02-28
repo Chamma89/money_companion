@@ -1,6 +1,6 @@
 var pg = require('pg')
-const pgp = require('pg-promise')();
 
+const pgp = require('pg-promise')();
 const cn = {
     host: 'localhost',
     port: 5432,
