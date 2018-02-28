@@ -2,6 +2,7 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import PasswordInput from './PasswordInput'
 import About from './About'
+import Savings from './Savings'
 // import Schedule from './Schedule'
 
 // The Main component renders one of the three provided
@@ -14,6 +15,7 @@ const Main = () => (
         <Switch>
             <Route exact path='/' component={PasswordInput} />
             <Route path='/about' component={About} />
+            <Route path='/savings' component={Savings} />
         </Switch>
     </main>
 )

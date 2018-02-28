@@ -1,4 +1,14 @@
 
 body {
   background-color: rebeccapurple;
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+  margin: 10px;
+}
+
+select {
+  margin: 5px;
 }

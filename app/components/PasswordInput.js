@@ -43,9 +43,14 @@ export default class PasswordInput extends React.Component {
   addInfo(event){
     let url = 'http://localhost:9000/api/mc/update'
     let data = {
-      name: this.refs.name.value,
-      email: this.refs.email.value,
-      phone: this.refs.phone.value
+      currentbalance: this.refs.currentbalance.value,
+      income: this.refs.income.value,
+      closingbalance: this.refs.closingbalance.value,
+      month: this.refs.month.value
+
+
+
+
     }
 
     // var request = new Request('http://localhost:9000/api/mc/update',{
@@ -71,25 +76,27 @@ export default class PasswordInput extends React.Component {
   render() {
     return (<div>
       <form ref="incomeForm">
-      <label>Current Balance</label>
-        <input type="text" ref="name" placeholder="name"/>
-        <input type="text" ref="email" placeholder="email" />
-        <input type="number" ref="phone" placeholder="phone" />
-        <button onClick={this.addInfo.bind(this)}>add info</button>
+        <select name="months">
+          <option ref="month" value="January">January</option>
+          <option ref="month" value="February">February</option>
+          <option ref="month" value="March">March</option>
+          <option ref="month" value="April">April</option>
+          <option ref="month" value="May">May</option>
+          <option ref="month" value="June">June</option>
+          <option ref="month" value="July">July</option>
+          <option ref="month" value="August">August</option>
+          <option ref="month" value="September">September</option>
+          <option ref="month" value="October">October</option>
+          <option ref="month" value="November">November</option>
+          <option ref="month" value="December">Decemeber</option>
+        </select> <br />
+        <input type="text" ref="currentbalance" placeholder="opening balance"/><br />
+        <input type="text" ref="income" placeholder="income" /><br />
+        <input type="number" ref="closingbalance" placeholder="closing balance" /><br />
+        <button onClick={this.addInfo.bind(this)}>Calculate</button>
       </form>
 
-
-
-      <input 
-      onChange={this.onTextAreaChange}></input>
-      <label>Income</label>
-      <input
-        onChange={this.onTextAreaChange}></input>
-      <label>Closing Balance</label>
-      <input
-        onChange={this.onTextAreaChange}></input>
+      
     </div>)
   }
-
 }
-

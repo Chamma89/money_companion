@@ -10,7 +10,7 @@ export default class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      user: {name: 'getting user'}
+      user: {name: 'Loading...'}
     }
   } 
 
@@ -23,12 +23,13 @@ export default class App extends React.Component {
 
 
   render() {
+    
     const user = this.state.user
+    
     return (<div>
       <h1 className="yo">Money Companion</h1>
       <Header />
       <Main />
-      <p>{user.email}</p>
     </div>)
   }
 }

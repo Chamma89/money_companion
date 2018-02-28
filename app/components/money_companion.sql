@@ -1,8 +1,11 @@
 CREATE DATABASE money_companion;
 
-CREATE TABLE users (
+CREATE TABLE savings (
 	id Serial PRIMARY KEY,
-	name VARCHAR(300),
-    email VARCHAR(100),
-    phone INTEGER
+	currentBalance INTEGER,
+    income INTEGER,
+    closingBalance INTEGER,
+    spending INTEGER,
+    saving INTEGER,
+    month VARCHAR(15)
 );
