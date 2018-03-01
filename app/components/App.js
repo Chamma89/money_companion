@@ -4,6 +4,8 @@ import React from 'react'
 import PasswordInput from './PasswordInput'
 import { Link } from 'react-router-dom'
 import { BrowserRouter } from 'react-router-dom'
+import logo from './Photos/mcLogo.png'
+
 
 export default class App extends React.Component {
 
@@ -27,7 +29,7 @@ export default class App extends React.Component {
     const user = this.state.user
     
     return (<div>
-      <h1 className="yo">Money Companion</h1>
+      <img src={logo} />
       <Header />
       <Main />
     </div>)
@@ -39,3 +41,5 @@ export default class App extends React.Component {
 // {user.keys(this.state.items).forEach(function(key){
 //   <p>{key}</p>
 // })}
+
+

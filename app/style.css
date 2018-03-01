@@ -2,13 +2,18 @@
 body {
   background-color: rebeccapurple;
   text-align: center;
+  font-family: 'Work Sans', sans-serif;
 }
 
 li {
   display: inline-block;
-  margin: 10px;
+  margin-right: 22px;
 }
 
 select {
   margin: 5px;
+}
+
+img {
+  width: 50%;
 }

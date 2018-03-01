@@ -1,4 +1,4 @@
-var _ = require('underscore')
+// var _ = require('underscore')
 import React from 'react'
 import passwordMeter from '../../lib/passwordMeter'
 import './PasswordInput.scss'
@@ -8,9 +8,12 @@ export default class PasswordInput extends React.Component {
   constructor(props) {
     super(props)
     this.onTextAreaChange = this.onTextAreaChange.bind(this)
-    this.state = { 
+    this.getMonth = this.getMonth.bind(this)
+    this.addInfo = this.addInfo.bind(this)
+    this.state = {
       user: 'djksjdslk',
-      content: '' 
+      content: '',
+      month: 'January'
     }
   }
 
@@ -19,6 +22,10 @@ export default class PasswordInput extends React.Component {
       content: event.target.value
     })
     console.log(this.state.content)
+  }
+
+  getMonth(e) {
+    this.setState({month: e.target.value})
   }
 
   componentDidMount(){
@@ -46,11 +53,7 @@ export default class PasswordInput extends React.Component {
       currentbalance: this.refs.currentbalance.value,
       income: this.refs.income.value,
       closingbalance: this.refs.closingbalance.value,
-      month: this.refs.month.value
-
-
-
-
+      month: this.state.month
     }
 
     // var request = new Request('http://localhost:9000/api/mc/update',{
@@ -75,25 +78,25 @@ export default class PasswordInput extends React.Component {
 
   render() {
     return (<div>
-      <form ref="incomeForm">
-        <select name="months">
-          <option ref="month" value="January">January</option>
-          <option ref="month" value="February">February</option>
-          <option ref="month" value="March">March</option>
-          <option ref="month" value="April">April</option>
-          <option ref="month" value="May">May</option>
-          <option ref="month" value="June">June</option>
-          <option ref="month" value="July">July</option>
-          <option ref="month" value="August">August</option>
-          <option ref="month" value="September">September</option>
-          <option ref="month" value="October">October</option>
-          <option ref="month" value="November">November</option>
-          <option ref="month" value="December">Decemeber</option>
+      <form ref="incomeForm" onSubmit={this.addInfo}>
+        <select name="months" onChange={this.getMonth}>
+          <option value="January">January</option>
+          <option value="February">February</option>
+          <option value="March">March</option>
+          <option value="April">April</option>
+          <option value="May">May</option>
+          <option value="June">June</option>
+          <option value="July">July</option>
+          <option value="August">August</option>
+          <option value="September">September</option>
+          <option value="October">October</option>
+          <option value="November">November</option>
+          <option value="December">Decemeber</option>
         </select> <br />
         <input type="text" ref="currentbalance" placeholder="opening balance"/><br />
         <input type="text" ref="income" placeholder="income" /><br />
         <input type="number" ref="closingbalance" placeholder="closing balance" /><br />
-        <button onClick={this.addInfo.bind(this)}>Calculate</button>
+        <button>Calculate</button>
       </form>
 
       

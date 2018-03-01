@@ -30,13 +30,16 @@
     "webpack-dev-server": "^2.9.4"
   },
   "dependencies": {
-    "chart.js": "^1.1.1",
+    "bootstrap": "^4.0.0",
+    "chart.js": "^2.7.1",
     "express": "^4.16.2",
+    "lodash": "^4.17.5",
     "pg": "^7.4.1",
     "pg-promise": "^8.0.0",
     "react": "^16.2.0",
+    "react-bootstrap": "^0.32.1",
+    "react-chartjs-2": "^2.7.0",
     "react-dom": "^16.2.0",
-    "react-router-dom": "^4.2.2",
-    "underscore": "^1.8.3"
+    "react-router-dom": "^4.2.2"
   }
 }
