@@ -1,4 +1,3 @@
-// var _ = require('underscore')
 import React from 'react'
 import passwordMeter from '../../lib/passwordMeter'
 import './PasswordInput.scss'
@@ -32,20 +31,6 @@ export default class PasswordInput extends React.Component {
     console.log('its working')
   }
 
-  // getInfo(){
-  //   fetch('https://localhost:9000/api/mc', {
-  //     method: 'POST',
-  //     headers: {
-  //       'Accept': 'application/json',
-  //     'Content-Type': 'application/json',
-  //     },
-  //     body: JSON.stringify({
-  //       firstParam: 'yourValue',
-  //       secondParam: 'yourOtherValue',
-  //     })
-  //   }).then(res => res.json())
-  //     .then(res => this.setState({ user: res.user}))
-  // }
 
   addInfo(event){
     let url = 'http://localhost:9000/api/mc/update'
@@ -55,14 +40,6 @@ export default class PasswordInput extends React.Component {
       closingbalance: this.refs.closingbalance.value,
       month: this.state.month
     }
-
-    // var request = new Request('http://localhost:9000/api/mc/update',{
-    //   method: 'POST',
-    //   headers: new Headers({ 'Content-Type': 'application/json'}),
-    //   body: JSON.stringify(data)
-    // })
-  
-    console.log('FETCH REQUEST COMING')
     
     fetch(url, {
       method: 'POST',

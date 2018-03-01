@@ -37,9 +37,3 @@ export default class App extends React.Component {
 }
 
 
-
-// {user.keys(this.state.items).forEach(function(key){
-//   <p>{key}</p>
-// })}
-
-
