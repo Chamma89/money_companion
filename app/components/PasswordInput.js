@@ -54,7 +54,7 @@ export default class PasswordInput extends React.Component {
   }
 
   render() {
-    return (<div>
+    return (<div className="main">
       <form ref="incomeForm" onSubmit={this.addInfo}>
         <select name="months" onChange={this.getMonth}>
           <option value="January">January</option>
@@ -75,8 +75,7 @@ export default class PasswordInput extends React.Component {
         <input type="number" ref="closingbalance" placeholder="closing balance" /><br />
         <button>Calculate</button>
       </form>
-
-      
     </div>)
   }
 }
+

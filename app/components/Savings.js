@@ -19,10 +19,16 @@ export default class Savings extends React.Component {
             }
           },
           labels:['January', 'February', 'March', 'April'],
-          datasets:[{          
+          datasets:[{
+            
+            datalabels: {
+              align: 'end',
+              anchor: 'end',
+              color: ['rgb(77, 137, 85)', 'rgb(77, 137, 85)', 'rgb(77, 137, 85)', 'rgb(77, 137, 85)']
+            },          
             label: 'Month',
             strokeColor: "rgba(220,220,220,1)",
-            data: ['20000', '12011', '10000', '9000'],
+            data: ['20000', '-12000', '0', '0'],
             hoverBackgroundColor: ['rgb(0, 191, 255)', 'rgb(255, 0, 0)', 'rgb(255, 153, 0)', 'rgb(48, 164, 46)'],
             backgroundColor:[
               'rgba(0, 0, 255, 0.3)',
@@ -44,11 +50,11 @@ export default class Savings extends React.Component {
           .then(res => res.json())
           .then(res => {
             let charData = _.merge({}, this.state.charData)
-            charData.datasets[0].data[0] = res.user.saving
-            console.log(res.user)
-
-
-
+            charData.datasets[0].data[0] = res.user[0].saving
+            charData.datasets[0].data[1] = res.user[1].saving
+            charData.datasets[0].data[2] = res.user[2].saving
+            // charData.datasets[0].data[3] = res.user[3].saving
+            console.log(res)
             this.setState({ user: res.user, charData: charData })
           })
     }
@@ -57,28 +63,35 @@ export default class Savings extends React.Component {
 
       const user = this.state.user
       console.log(user)
-      return <div>
+      return <div className="chart">
            
-          <p>Saving {user.saving}</p>
-          <p>Spending {user.spending}</p>
-          {/* <p>Months</p> */}
+          
         <Bar
           data={this.state.charData}
           options={{
             scales: {
               yAxes: [
+                
                 {
+                  gridLines: {
+                    display: true,
+                    color: "rgba(255, 255, 255, 0.3)"
+                  },
                   ticks: {
                     fontWeight: 600,
                     beginAtZero: true,
                     fontColor: 'white',
                     callback: function (label, index, labels) {
-                      return '$ ' + label;
+                      return '$ ' +label;
                     }
                   }
                 }
               ],
               xAxes:[{
+                gridLines: {
+                  display: true,
+                  color: "rgba(255, 255, 255, 0.3)"
+                },
                 ticks:{fontColor: 'white', fontWeight: 800}
               }],
             },
