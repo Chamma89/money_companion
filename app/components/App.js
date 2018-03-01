@@ -30,8 +30,9 @@ export default class App extends React.Component {
     
     return (<div>
       <img src={logo} />
-      <Header />
+      <Header className="header"/>
       <Main />
+      <p className="footer">&copy; 2018 Fouad Chamma. All rights reserved. Money Companion developer.</p>
     </div>)
   }
 }

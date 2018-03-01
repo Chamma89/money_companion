@@ -10,10 +10,55 @@ li {
   margin-right: 22px;
 }
 
+
+a:hover {
+  color: skyblue;
+}
+
 select {
   margin: 5px;
 }
 
 img {
   width: 50%;
+}
+
+ul {
+  padding-top: 50px;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #CCC;
+  color: rgb(254, 254, 254);
+  width: 400px;
+  font-size: 20px;
+  
+
+  &:focus {
+    outline: none;    
+  }
+}
+
+input::-webkit-input-placeholder {
+  color: #AAA;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: dodgerblue;
+}
+
+input:focus+.underline {
+  transform: scale(1);
+}
+
+select {
+  margin-bottom: 50px;
+}
+
+button:hover {
+  color: blue;
+  background: #CCC;
+  border-radius: 4px;
 }

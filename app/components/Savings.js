@@ -53,7 +53,7 @@ export default class Savings extends React.Component {
             charData.datasets[0].data[0] = res.user[0].saving
             charData.datasets[0].data[1] = res.user[1].saving
             charData.datasets[0].data[2] = res.user[2].saving
-            // charData.datasets[0].data[3] = res.user[3].saving
+            charData.datasets[0].data[3] = res.user[3].saving
             console.log(res)
             this.setState({ user: res.user, charData: charData })
           })
