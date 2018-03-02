@@ -1,45 +1,25 @@
-# webpack react hot reload starter
+# Money Companion :dollar: :bar_chart:
+ 
+## The Problem
+* People are always struggling to keep track of their savings.
+* That's basically it.
 
-All you need, none you don't. 
+# Solution
+* An easy to understand and visually pleasing app to show your spending and savings
 
-Sensible starter with hot reload to try react with webpack 3 that deploys straight to github pages.
+# Cool Tech
+* ChartJs was a obstacle to handle but once i got comfortable with it, it became a very useful and fun tool!
 
-## Based on
+# Lessons Learned
+* Learned that planning is very crucial. The project sounds more simple at the start.
+* Time is crucial when using libraries and frameworks which have never been used before.
+* Predict the scalability of the components in your website.
+* Debugging is vital when learning to use a new language. 
 
-1. Bundler: [Webpack](http://webpack.github.io/docs/), [Babel](https://babeljs.io)
-2. Language: [ES2015](https://babeljs.io/docs/learn-es2015/)
-3. Library: [React](https://reactjs.org/), [Sass](http://sass-lang.com/), [Mocha](https://mochajs.org)
-
-## Usage
-
-1. clone this repo
-```
-git clone THIS_GIT_REPO_URL
-```
-
-2. install dependencies using npm or yarn
-```
-npm install
-```
-or
-```
-yarn install
-```
-
-3. start dev server and start coding in `/app`
-```
-npm start
-```
-
-## build and deploy with github pages
-
-Github pages support hosting your site in a docs directory within your repo. Simply run the following command to build your site into docs directory and update the source setting on github. 
-
-```
-npm run build
-```
-
-## run tests in `/test`
-```
-npm test
-``` 
+# Tech Used
+* ReactJS
+* NodeJS
+* Express
+* Postgresql
+* Webpack
+* SASS
