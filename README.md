@@ -1,5 +1,6 @@
 # Money Companion :dollar: :bar_chart:
  
+Checkout the <a href="https://chamma89.github.io/money_companion/">App</a>
 ## The Problem
 * People are always struggling to keep track of their savings.
 * That's basically it.
