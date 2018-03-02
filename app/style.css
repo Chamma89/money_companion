@@ -34,7 +34,7 @@ input {
   color: rgb(254, 254, 254);
   width: 400px;
   font-size: 20px;
-  
+
 
   &:focus {
     outline: none;    
@@ -48,6 +48,11 @@ input::-webkit-input-placeholder {
 input:focus::-webkit-input-placeholder {
   color: dodgerblue;
 }
+
+input:hover::-webkit-input-placeholder {
+  color: dodgerblue;
+}
+
 
 input:focus+.underline {
   transform: scale(1);

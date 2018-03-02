@@ -17,7 +17,9 @@ export default class App extends React.Component {
   } 
 
   componentDidMount() {
-    fetch('http://localhost:9000/api/mc')
+    let herokuDomain = 'https://money-companion.herokuapp.com'
+    let localDomain = 'http://localhost:9000'
+    fetch(`${herokuDomain}/api/mc`)
       .then(res => res.json())
       // .then(res => console.log(res))
       .then(res => this.setState({ user: res.user}))

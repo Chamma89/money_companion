@@ -46,7 +46,9 @@ export default class Savings extends React.Component {
     
 
     componentDidMount() {
-      fetch('http://localhost:9000/api/mc')
+      let herokuDomain = 'https://money-companion.herokuapp.com'
+      let localDomain = 'http://localhost:9000'
+      fetch(`${herokuDomain}/api/mc`)
           .then(res => res.json())
           .then(res => {
             let charData = _.merge({}, this.state.charData)

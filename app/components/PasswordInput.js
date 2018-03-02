@@ -33,7 +33,9 @@ export default class PasswordInput extends React.Component {
 
 
   addInfo(event){
-    let url = 'http://localhost:9000/api/mc/update'
+    let herokuDomain = 'https://money-companion.herokuapp.com'
+    let localDomain = 'http://localhost:9000'
+    let url = `${herokuDomain}/api/mc/update`
     let data = {
       currentbalance: this.refs.currentbalance.value,
       income: this.refs.income.value,
