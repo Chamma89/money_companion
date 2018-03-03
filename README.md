@@ -6,14 +6,14 @@ Checkout the <a href="https://chamma89.github.io/money_companion/">App</a>
 * That's basically it.
 
 # Solution
-* An easy to understand and visually pleasing app to show your spending and savings
+* An easy to understand and visually pleasing app to show your spending and savings.
 
 # Cool Tech
 * ChartJs was a obstacle to handle but once i got comfortable with it, it became a very useful and fun tool!
 
 # Lessons Learned
 * Learned that planning is very crucial. The project sounds more simple at the start.
-* Time is crucial when using libraries and frameworks which have never been used before.
+* Time is crucial when using libraries and frameworks which have never been used before. I only had 4 days to make this.
 * Predict the scalability of the components in your website.
 * Debugging is vital when learning to use a new language. 
 
@@ -24,3 +24,11 @@ Checkout the <a href="https://chamma89.github.io/money_companion/">App</a>
 * Postgresql
 * Webpack
 * SASS
+
+# __*Update*__
+* Still a lot more improvements to make such as:
+    * automated closing balance using API.
+    * automate income unless your income changes.
+    * only update current month at the end of the month.
+
+
